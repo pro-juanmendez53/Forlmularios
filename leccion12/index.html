@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 12: Ejemplo Completo de Formulario</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lección 12: Ejemplo Completo de Formulario</h1>
+    </header>
+    <main class="container">
+        <div class="lesson-content">
+            <h2>Uniendo todas las piezas</h2>
+            <p>
+                En esta lección, vamos a construir un formulario de registro completo que utilice muchos de los
+                elementos y conceptos que hemos aprendido a lo largo de la clase.
+            </p>
+            <p>
+                Este ejemplo práctico te ayudará a ver cómo interactúan las diferentes partes de un formulario para
+                crear una experiencia de usuario coherente y funcional.
+            </p>
+
+            <h2>Formulario de Registro de Evento</h2>
+            <p>
+                A continuación se muestra el código completo de un formulario de registro para un evento ficticio.
+                Analiza cómo se utilizan las etiquetas, los tipos de input, las validaciones y la agrupación de campos.
+            </p>
+
+            <div class="code-example">
+                <pre><code>
+&lt;form action="/registrar-evento" method="POST"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Información Personal&lt;/legend&gt;
+    &lt;div&gt;
+      &lt;label for="nombre"&gt;Nombre Completo:&lt;/label&gt;
+      &lt;input type="text" id="nombre" name="nombre_completo" required placeholder="Ej: Ana García"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;label for="email"&gt;Correo Electrónico:&lt;/label&gt;
+      &lt;input type="email" id="email" name="email_usuario" required placeholder="tu@email.com"&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Detalles del Evento&lt;/legend&gt;
+    &lt;div&gt;
+      &lt;label for="tipo_entrada"&gt;Tipo de Entrada:&lt;/label&gt;
+      &lt;select id="tipo_entrada" name="tipo_entrada" required&gt;
+        &lt;option value=""&gt;-- Selecciona una opción --&lt;/option&gt;
+        &lt;option value="general"&gt;Entrada General&lt;/option&gt;
+        &lt;option value="vip"&gt;Entrada VIP&lt;/option&gt;
+        &lt;option value="estudiante"&gt;Entrada de Estudiante&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;p&gt;¿Qué talleres te interesan?&lt;/p&gt;
+      &lt;input type="checkbox" id="taller_html" name="intereses" value="html"&gt;
+      &lt;label for="taller_html"&gt;Taller de HTML Avanzado&lt;/label&gt;
+      &lt;br&gt;
+      &lt;input type="checkbox" id="taller_css" name="intereses" value="css"&gt;
+      &lt;label for="taller_css"&gt;Taller de CSS Grid&lt;/label&gt;
+      &lt;br&gt;
+      &lt;input type="checkbox" id="taller_js" name="intereses" value="js"&gt;
+      &lt;label for="taller_js"&gt;Taller de JavaScript Moderno&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Comentarios y Preferencias&lt;/legend&gt;
+    &lt;div&gt;
+      &lt;label for="comentarios"&gt;¿Alguna alergia o comentario adicional?&lt;/label&gt;
+      &lt;textarea id="comentarios" name="comentarios" rows="4" placeholder="Déjanos un mensaje..."&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;input type="checkbox" id="terminos" name="acepta_terminos" required&gt;
+      &lt;label for="terminos"&gt;Acepto los términos y condiciones.&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+
+  &lt;div class="nav-links"&gt;
+    &lt;button type="submit"&gt;Registrarme en el Evento&lt;/button&gt;
+    &lt;button type="reset"&gt;Limpiar Formulario&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+                </code></pre>
+            </div>
+
+            <div class="challenge">
+                <h3>Reto</h3>
+                <p>¡Es tu turno de brillar! Crea tu propio formulario completo desde cero. El tema es libre. Puede ser
+                    un formulario de contacto, de registro para un videojuego, para pedir una pizza, para adoptar una
+                    mascota, etc.</p>
+                <p>Tu formulario debe incluir, como mínimo:</p>
+                <ul>
+                    <li>Al menos tres tipos diferentes de <code>&lt;input&gt;</code>.</li>
+                    <li>Un <code>&lt;textarea&gt;</code>.</li>
+                    <li>Un <code>&lt;select&gt;</code> con varias opciones.</li>
+                    <li>Al menos un campo con validación (ej. <code>required</code>).</li>
+                    <li>Al menos un <code>&lt;fieldset&gt;</code> para agrupar campos.</li>
+                    <li>Botones de envío y reseteo.</li>
+                </ul>
+                <p>¡Sé creativo y aplica todo lo que has aprendido!</p>
+                <!-- Espacio para el reto del alumno -->
+
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Volver al Menú Principal</a>
+        </div>
+    </main>
+    <footer>
+        <p>Curso de Desarrollo Web - 2025</p>
+    </footer>
+</body>
+
+</html>

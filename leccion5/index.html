@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 5: Área de Texto (&lt;textarea&gt;)</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lección 5: Área de Texto (<code>&lt;textarea&gt;</code>)</h1>
+    </header>
+    <main class="container">
+        <div class="lesson-content">
+            <h2>Para Entradas de Texto Multilínea</h2>
+            <p>
+                Mientras que <code>&lt;input type="text"&gt;</code> es ideal para una sola línea de texto (como nombres,
+                correos, etc.), la etiqueta <code>&lt;textarea&gt;</code> se utiliza cuando necesitas que el usuario
+                pueda introducir texto más largo, como un comentario, un mensaje o una biografía.
+            </p>
+            <p>
+                A diferencia de <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code> es una etiqueta de apertura y
+                cierre. Cualquier texto que coloques entre <code>&lt;textarea&gt;</code> y
+                <code>&lt;/textarea&gt;</code> se mostrará como el contenido inicial del campo.
+            </p>
+
+            <h2>Atributos Principales</h2>
+            <ul>
+                <li><code>name</code>: Al igual que con los inputs, es esencial para identificar el dato cuando se envía
+                    el formulario.</li>
+                <li><code>rows</code>: Define la altura visible del área de texto, en número de líneas.</li>
+                <li><code>cols</code>: Define el ancho visible del área de texto, en número de caracteres.</li>
+                <li><code>placeholder</code>: Muestra un texto de ejemplo cuando el campo está vacío.</li>
+                <li><code>required</code>, <code>disabled</code>, <code>readonly</code>: Funcionan igual que en los
+                    inputs.</li>
+            </ul>
+            <p>
+                Nota: Aunque <code>rows</code> y <code>cols</code> definen el tamaño inicial, los usuarios generalmente
+                pueden redimensionar el área de texto arrastrando su esquina inferior derecha (este comportamiento se
+                puede controlar con CSS).
+            </p>
+
+            <h2>Ejemplo de Código</h2>
+            <div class="code-example">
+                <pre><code>
+&lt;form action="#"&gt;
+  &lt;div&gt;
+    &lt;label for="comentario"&gt;Deja tu comentario:&lt;/label&gt;
+    &lt;textarea 
+        id="comentario" 
+        name="user_comment" 
+        rows="8" 
+        cols="50" 
+        placeholder="Escribe aquí tu opinión..."
+    &gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;button type="submit"&gt;Enviar Comentario&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+                </code></pre>
+            </div>
+
+            <div class="challenge">
+                <h3>Reto</h3>
+                <p>Crea un formulario de contacto simple. Debe tener un campo para el "Asunto" (usando un
+                    <code>&lt;input type="text"&gt;</code>) y un campo para el "Mensaje" (usando un
+                    <code>&lt;textarea&gt;</code>). El textarea debe tener una altura inicial de 5 filas.</p>
+                <!-- Espacio para el reto del alumno -->
+
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Volver al Menú Principal</a>
+        </div>
+    </main>
+    <footer>
+        <p>Curso de Desarrollo Web - 2025</p>
+    </footer>
+</body>
+
+</html>

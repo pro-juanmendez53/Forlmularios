@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 13: Herramientas Útiles</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lección 13: Herramientas Útiles</h1>
+    </header>
+    <main class="container">
+        <div class="lesson-content">
+            <h2>Inspeccionar Formularios con el Navegador</h2>
+            <p>
+                Una de las habilidades más importantes para un desarrollador web es saber utilizar las
+                <strong>Herramientas de Desarrollo (DevTools)</strong> que vienen integradas en todos los navegadores
+                modernos como Chrome, Firefox, Edge y Safari.
+            </p>
+            <p>
+                Para abrirlas, generalmente puedes hacer clic derecho en cualquier parte de una página y seleccionar
+                "Inspeccionar", o presionar la tecla <code>F12</code>.
+            </p>
+
+            <h3>La Pestaña "Elements" (Elementos)</h3>
+            <p>
+                Esta pestaña te muestra el código HTML y CSS de la página en tiempo real. Es increíblemente útil para:
+            </p>
+            <ul>
+                <li><strong>Ver la estructura del formulario:</strong> Puedes expandir y contraer nodos para entender
+                    cómo están anidados los elementos.</li>
+                <li><strong>Probar cambios de CSS en vivo:</strong> En el panel de estilos (Styles), puedes modificar,
+                    añadir o quitar reglas CSS y ver el resultado al instante sin tener que cambiar tu código. ¿Quieres
+                    ver cómo se ve un botón con otro color? ¡Pruébalo aquí!</li>
+                <li><strong>Revisar atributos:</strong> Puedes verificar si los atributos <code>id</code>,
+                    <code>name</code>, <code>for</code>, etc., están correctamente aplicados.</li>
+            </ul>
+            <img src="https://i.imgur.com/Y3e2v7g.png" alt="Pestaña Elements de las DevTools"
+                style="max-width:100%; border-radius:8px;">
+
+            <h3>La Pestaña "Network" (Red)</h3>
+            <p>
+                Esta pestaña te permite ver todas las solicitudes de red que hace la página. Es fundamental para depurar
+                el envío de formularios:
+            </p>
+            <ol>
+                <li>Abre las DevTools y ve a la pestaña "Network".</li>
+                <li>Rellena un formulario y envíalo.</li>
+                <li>Aparecerá una nueva entrada en la lista de solicitudes. Haz clic en ella.</li>
+                <li>Dentro de la solicitud, podrás ver:
+                    <ul>
+                        <li><strong>Headers (Encabezados):</strong> Aquí verás la URL de la solicitud, el método (GET o
+                            POST) y otros detalles.</li>
+                        <li><strong>Payload (Carga útil) o FormData:</strong> ¡Aquí es donde puedes ver los datos que tu
+                            formulario envió! Verás una lista de los <code>name</code> de tus campos y los valores que
+                            el usuario introdujo. Es la mejor forma de confirmar que estás enviando la información
+                            correcta.</li>
+                    </ul>
+                </li>
+            </ol>
+            <img src="https://i.imgur.com/9s8c4bB.png" alt="Pestaña Network de las DevTools"
+                style="max-width:100%; border-radius:8px;">
+
+
+            <div class="challenge">
+                <h3>Reto</h3>
+                <p>Realiza los siguientes pasos y describe lo que observas:</p>
+                <ol>
+                    <li>Ve al formulario de la <a href="../leccion12/index.html" target="_blank">Lección 12</a>.</li>
+                    <li>Abre las DevTools (<code>F12</code>) y ve a la pestaña "Elements".</li>
+                    <li>Selecciona el campo de "Nombre Completo" y, en el panel de estilos, cambia su
+                        <code>background-color</code> a <code>lightblue</code>. ¿Qué sucede?</li>
+                    <li>Ahora, ve a la pestaña "Network".</li>
+                    <li>Rellena el formulario con datos de prueba y haz clic en el botón de registrar.</li>
+                    <li>Busca la solicitud que se ha generado, haz clic en ella y busca la sección "Payload" o
+                        "FormData". ¿Qué datos ves ahí? Anota los pares clave/valor que se enviaron.</li>
+                </ol>
+                <!-- Escribe tus observaciones aquí -->
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Volver al Menú Principal</a>
+        </div>
+    </main>
+    <footer>
+        <p>Curso de Desarrollo Web - 2025</p>
+    </footer>
+</body>
+
+</html>

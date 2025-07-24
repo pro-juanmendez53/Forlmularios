@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 11: Envío de Formularios</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lección 11: Envío de Formularios</h1>
+    </header>
+    <main class="container">
+        <div class="lesson-content">
+            <h2>¿Qué pasa cuando haces clic en "Enviar"?</h2>
+            <p>
+                Cuando un usuario presiona un botón de tipo <code>submit</code>, el navegador empaqueta todos los datos
+                de los campos del formulario que tengan un atributo <code>name</code>. Luego, envía estos datos a la URL
+                especificada en el atributo <code>action</code> del formulario, utilizando el método HTTP definido en el
+                atributo <code>method</code>.
+            </p>
+            <p>
+                En este curso nos centramos en el "frontend" (lo que ve el usuario), por lo que no construiremos el
+                "backend" (el script del servidor que recibe los datos). Sin embargo, es crucial entender cómo se envían
+                los datos.
+            </p>
+
+            <h2>Diferencia entre GET y POST</h2>
+            <p>La diferencia entre los métodos <code>GET</code> y <code>POST</code> es una de las preguntas más comunes
+                en entrevistas de trabajo para desarrolladores web.</p>
+
+            <h3>Método <code>GET</code></h3>
+            <ul>
+                <li><strong>Cómo envía los datos:</strong> Los datos se añaden directamente a la URL como una cadena de
+                    parámetros (query string). La URL se ve así:
+                    <code>pagina.com/buscar?q=libros&autor=cervantes</code>.</li>
+                <li><strong>Visibilidad:</strong> Los datos son visibles en la barra de direcciones del navegador, en el
+                    historial y en los registros del servidor.</li>
+                <li><strong>Seguridad:</strong> <strong>No es seguro</strong> para enviar datos sensibles como
+                    contraseñas o información personal.</li>
+                <li><strong>Límite de tamaño:</strong> La longitud de la URL está limitada (unos 2048 caracteres), por
+                    lo que no se pueden enviar grandes cantidades de datos.</li>
+                <li><strong>Uso típico:</strong> Búsquedas, filtros, o cualquier acción que no modifique datos en el
+                    servidor y cuyo resultado quieras poder compartir o guardar en favoritos.</li>
+            </ul>
+
+            <h3>Método <code>POST</code></h3>
+            <ul>
+                <li><strong>Cómo envía los datos:</strong> Los datos se incluyen en el cuerpo de la solicitud HTTP. No
+                    son visibles en la URL.</li>
+                <li><strong>Visibilidad:</strong> Los datos no son visibles en la barra de direcciones, lo que los hace
+                    más discretos.</li>
+                <li><strong>Seguridad:</strong> Es el método <strong>preferido para datos sensibles</strong>. Aunque los
+                    datos no son visibles, viajan en texto plano a menos que se use HTTPS (conexión segura), que es el
+                    estándar hoy en día.</li>
+                <li><strong>Límite de tamaño:</strong> No hay límite de tamaño para los datos enviados.</li>
+                <li><strong>Uso típico:</strong> Inicios de sesión, registros de usuario, formularios de contacto,
+                    subida de archivos, o cualquier acción que cree o modifique datos en el servidor.</li>
+            </ul>
+
+            <h2>Ejemplo Práctico</h2>
+            <p>A continuación, dos formularios idénticos excepto por el método. Rellénalos y observa la URL del
+                navegador después de enviarlos (la página se recargará, pero fíjate en la barra de direcciones).</p>
+
+            <h3>Formulario con GET</h3>
+            <form action="" method="GET">
+                <label for="busqueda_get">Buscar:</label>
+                <input type="text" id="busqueda_get" name="q">
+                <button type="submit">Buscar con GET</button>
+            </form>
+
+            <h3>Formulario con POST</h3>
+            <form action="" method="POST">
+                <label for="busqueda_post">Buscar:</label>
+                <input type="text" id="busqueda_post" name="q">
+                <button type="submit">Buscar con POST</button>
+            </form>
+
+            <div class="challenge">
+                <h3>Reto</h3>
+                <p>Basado en lo que has aprendido, decide qué método (GET o POST) sería el más apropiado para los
+                    siguientes formularios y explica brevemente por qué:</p>
+                <ul>
+                    <li>Un formulario de inicio de sesión con campos de usuario y contraseña.</li>
+                    <li>La barra de búsqueda de Google.</li>
+                    <li>Un formulario para subir una nueva foto de perfil a una red social.</li>
+                    <li>Un formulario para registrarse en un evento, pidiendo nombre, email y teléfono.</li>
+                </ul>
+                <!-- Escribe tus respuestas aquí -->
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Volver al Menú Principal</a>
+        </div>
+    </main>
+    <footer>
+        <p>Curso de Desarrollo Web - 2025</p>
+    </footer>
+</body>
+
+</html>

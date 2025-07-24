@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 10: Formularios Accesibles y Buenas Prácticas</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lección 10: Formularios Accesibles y Buenas Prácticas</h1>
+    </header>
+    <main class="container">
+        <div class="lesson-content">
+            <h2>La Importancia de la Accesibilidad (a11y)</h2>
+            <p>
+                Un formulario accesible es aquel que puede ser utilizado por el mayor número posible de personas,
+                incluyendo aquellas con discapacidades (visuales, motoras, auditivas, cognitivas). Diseñar pensando en
+                la accesibilidad no solo es una cuestión de inclusión, sino que a menudo resulta en un mejor diseño para
+                todos los usuarios.
+            </p>
+
+            <h3>1. Etiquetas Correctamente Asociadas</h3>
+            <p>
+                Como vimos en la Lección 4, es la regla de oro. Cada campo de formulario (<code>input</code>,
+                <code>textarea</code>, <code>select</code>) debe tener una <code>&lt;label&gt;</code> asociada mediante
+                los atributos <code>for</code> e <code>id</code>. Esto permite que los lectores de pantalla anuncien la
+                función de cada campo.
+            </p>
+
+            <h3>2. Estructura Semántica y Clara</h3>
+            <p>
+                Usa HTML de forma semántica. Utiliza <code>&lt;fieldset&gt;</code> y <code>&lt;legend&gt;</code> para
+                agrupar campos relacionados. Esto proporciona contexto a los usuarios de tecnologías de asistencia. El
+                orden de los campos en el código HTML debe seguir un flujo lógico y natural.
+            </p>
+
+            <h3>3. Consideraciones de UX (Experiencia de Usuario)</h3>
+            <ul>
+                <li><strong>Orden Lógico:</strong> Organiza los campos en un orden predecible (ej. Nombre, Apellido,
+                    Email, no Email, Apellido, Nombre).</li>
+                <li><strong>Feedback Visual:</strong> Asegúrate de que los estados de los campos (foco, error,
+                    deshabilitado) sean visualmente claros. Usa colores, bordes y/o iconos. El CSS de este curso ya
+                    aplica un estilo al foco, por ejemplo.</li>
+                <li><strong>Instrucciones Claras:</strong> Si un campo requiere un formato específico, indícalo
+                    claramente. El atributo <code>placeholder</code> puede ayudar, pero no debe reemplazar a una
+                    <code>&lt;label&gt;</code>.</li>
+                <li><strong>Validación Amigable:</strong> Los mensajes de error de HTML5 son un buen comienzo. Deben ser
+                    claros y explicar cómo solucionar el problema.</li>
+            </ul>
+
+            <h3>4. Uso de Atributos ARIA (si es necesario)</h3>
+            <p>
+                ARIA (Accessible Rich Internet Applications) es un conjunto de atributos que se pueden añadir a los
+                elementos HTML para mejorar su accesibilidad, especialmente en componentes complejos creados con
+                JavaScript. Para formularios estándar, un buen uso de HTML semántico suele ser suficiente. Sin embargo,
+                en casos avanzados, atributos como <code>aria-required</code>, <code>aria-describedby</code> (para
+                asociar un campo con un texto de ayuda) o <code>role</code> pueden ser necesarios.
+            </p>
+
+            <h2>Ejemplo de Buenas Prácticas</h2>
+            <div class="code-example">
+                <pre><code>
+&lt;form action="#"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Formulario de Contacto Accesible&lt;/legend&gt;
+    
+    &lt;div&gt;
+      &lt;!-- Etiqueta asociada correctamente --&gt;
+      &lt;label for="nombre"&gt;Nombre Completo (obligatorio):&lt;/label&gt;
+      &lt;input type="text" id="nombre" name="nombre" required aria-required="true"&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+      &lt;label for="mensaje"&gt;Tu Mensaje:&lt;/label&gt;
+      &lt;!-- Se asocia texto de ayuda con aria-describedby --&gt;
+      &lt;textarea id="mensaje" name="mensaje" aria-describedby="ayuda-mensaje"&gt;&lt;/textarea&gt;
+      &lt;small id="ayuda-mensaje"&gt;No incluyas información sensible en tu mensaje.&lt;/small&gt;
+    &lt;/div&gt;
+
+  &lt;/fieldset&gt;
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+                </code></pre>
+            </div>
+
+            <div class="challenge">
+                <h3>Reto</h3>
+                <p>Revisa uno de los formularios que creaste en los retos anteriores (por ejemplo, el de la Lección 8).
+                    ¿Cumple con las buenas prácticas de accesibilidad que hemos visto? Asegúrate de que cada campo tenga
+                    una <code>&lt;label&gt;</code> correctamente asociada. Si usaste <code>required</code>, añade
+                    también <code>aria-required="true"</code> por buena práctica.</p>
+                <!-- Espacio para el reto del alumno: Pueden pegar aquí el código de un reto anterior y mejorarlo -->
+
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Volver al Menú Principal</a>
+        </div>
+    </main>
+    <footer>
+        <p>Curso de Desarrollo Web - 2025</p>
+    </footer>
+</body>
+
+</html>

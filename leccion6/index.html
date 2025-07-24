@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 6: Listas Desplegables</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lección 6: Listas Desplegables (<code>&lt;select&gt;</code>, <code>&lt;option&gt;</code>)</h1>
+    </header>
+    <main class="container">
+        <div class="lesson-content">
+            <h2>Crear Menús de Selección</h2>
+            <p>
+                Las listas desplegables son una excelente manera de permitir que el usuario elija una o varias opciones
+                de una lista predefinida. Esto reduce errores de escritura y estandariza las respuestas. Se crean
+                combinando dos etiquetas:
+            </p>
+            <ul>
+                <li><code>&lt;select&gt;</code>: El contenedor del menú desplegable.</li>
+                <li><code>&lt;option&gt;</code>: Cada uno de los ítems dentro de la lista.</li>
+            </ul>
+            <p>
+                El atributo <code>name</code> se coloca en la etiqueta <code>&lt;select&gt;</code>. El valor que se
+                envía al servidor es el que se encuentra en el atributo <code>value</code> de la
+                <code>&lt;option&gt;</code> seleccionada.
+            </p>
+
+            <h3>Opción Seleccionada por Defecto</h3>
+            <p>
+                Para que una opción aparezca seleccionada por defecto cuando se carga la página, se le añade el atributo
+                booleano <code>selected</code>.
+            </p>
+
+            <h3>Grupos de Opciones con <code>&lt;optgroup&gt;</code></h3>
+            <p>
+                Si tienes una lista muy larga, puedes agrupar opciones relacionadas bajo un título usando la etiqueta
+                <code>&lt;optgroup&gt;</code>. El atributo <code>label</code> del <code>&lt;optgroup&gt;</code> define
+                el título del grupo, que no es una opción seleccionable.
+            </p>
+
+            <h2>Ejemplo de Código</h2>
+            <div class="code-example">
+                <pre><code>
+&lt;form action="#"&gt;
+  &lt;div&gt;
+    &lt;label for="pais"&gt;Elige tu país:&lt;/label&gt;
+    &lt;select id="pais" name="user_country"&gt;
+        &lt;option value=""&gt;--Por favor, elige una opción--&lt;/option&gt;
+        &lt;option value="gt"&gt;Guatemala&lt;/option&gt;
+        &lt;option value="es" selected&gt;España&lt;/option&gt;
+        &lt;option value="ar"&gt;Argentina&lt;/option&gt;
+        &lt;option value="co"&gt;Colombia&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;label for="vehiculo"&gt;Elige tu vehículo preferido:&lt;/label&gt;
+    &lt;select id="vehiculo" name="user_vehicle"&gt;
+        &lt;optgroup label="Europeos"&gt;
+            &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+            &lt;option value="audi"&gt;Audi&lt;/option&gt;
+        &lt;/optgroup&gt;
+        &lt;optgroup label="Asiáticos"&gt;
+            &lt;option value="toyota"&gt;Toyota&lt;/option&gt;
+            &lt;option value="honda"&gt;Honda&lt;/option&gt;
+        &lt;/optgroup&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+                </code></pre>
+            </div>
+
+            <div class="challenge">
+                <h3>Reto</h3>
+                <p>Crea una lista desplegable para que un usuario elija su nivel de estudios. Las opciones deben ser:
+                    "Primaria", "Secundaria", "Bachillerato", "Universidad" y "Postgrado". La opción "Bachillerato" debe
+                    estar seleccionada por defecto.</p>
+                <!-- Espacio para el reto del alumno -->
+
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Volver al Menú Principal</a>
+        </div>
+    </main>
+    <footer>
+        <p>Curso de Desarrollo Web - 2025</p>
+    </footer>
+</body>
+
+</html>

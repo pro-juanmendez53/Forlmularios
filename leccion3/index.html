@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 3: Elementos de Entrada (&lt;input&gt;)</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lección 3: Elementos de Entrada (<code>&lt;input&gt;</code>)</h1>
+    </header>
+    <main class="container">
+        <div class="lesson-content">
+            <h2>La etiqueta <code>&lt;input&gt;</code></h2>
+            <p>
+                La etiqueta <code>&lt;input&gt;</code> es, sin duda, el elemento más versátil y fundamental de los
+                formularios HTML. Permite crear una gran variedad de campos de entrada gracias a su atributo
+                <code>type</code>.
+            </p>
+
+            <h3>Tipos de <code>&lt;input&gt;</code> más comunes</h3>
+            <ul>
+                <li><code>type="text"</code>: Un campo de texto de una sola línea.</li>
+                <li><code>type="password"</code>: Un campo de texto donde los caracteres se ocultan.</li>
+                <li><code>type="email"</code>: Un campo para direcciones de correo electrónico (con validación básica).
+                </li>
+                <li><code>type="number"</code>: Un campo para introducir números.</li>
+                <li><code>type="date"</code>: Un campo para seleccionar una fecha.</li>
+                <li><code>type="checkbox"</code>: Una casilla de verificación que puede estar marcada o no.</li>
+                <li><code>type="radio"</code>: Un botón de opción. Varios radios con el mismo <code>name</code> forman
+                    un grupo donde solo uno puede ser seleccionado.</li>
+                <li><code>type="submit"</code>: Un botón que envía el formulario.</li>
+                <li><code>type="reset"</code>: Un botón que resetea todos los campos del formulario a sus valores
+                    iniciales.</li>
+                <li><code>type="file"</code>: Un campo que permite al usuario seleccionar un archivo de su dispositivo.
+                </li>
+                <li><code>type="hidden"</code>: Un campo de datos que no es visible para el usuario, pero cuyo valor se
+                    envía con el formulario.</li>
+            </ul>
+
+            <h3>Atributos Importantes</h3>
+            <ul>
+                <li><code>name</code>: Esencial. Asigna un nombre al campo, que se usará como clave cuando se envíen los
+                    datos.</li>
+                <li><code>value</code>: El valor inicial del campo. En el caso de los botones, es el texto que muestran.
+                </li>
+                <li><code>placeholder</code>: Un texto de ejemplo que aparece en el campo cuando está vacío.</li>
+                <li><code>required</code>: Hace que el campo sea obligatorio.</li>
+                <li><code>disabled</code>: Deshabilita el campo, el usuario no puede interactuar con él.</li>
+                <li><code>readonly</code>: El usuario no puede modificar el valor del campo, pero sí se envía con el
+                    formulario.</li>
+            </ul>
+
+            <h2>Ejemplo de Código</h2>
+            <div class="code-example">
+                <pre><code>
+&lt;form action="#" method="GET"&gt;
+  &lt;div&gt;
+    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+    &lt;input type="text" id="nombre" name="usuario_nombre" placeholder="Escribe tu nombre"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="pass"&gt;Contraseña:&lt;/label&gt;
+    &lt;input type="password" id="pass" name="usuario_pass" required&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;input type="submit" value="Enviar"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+                </code></pre>
+            </div>
+
+            <div class="challenge">
+                <h3>Reto</h3>
+                <p>Crea un formulario que pida al usuario su email y su fecha de nacimiento. Añade un botón de envío.
+                    Asegúrate de usar los tipos de <code>input</code> correctos y de que el campo de email tenga un
+                    <code>placeholder</code>.</p>
+                <!-- Espacio para el reto del alumno -->
+
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Volver al Menú Principal</a>
+        </div>
+    </main>
+    <footer>
+        <p>Curso de Desarrollo Web - 2025</p>
+    </footer>
+</body>
+
+</html>

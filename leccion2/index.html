@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 2: Estructura Básica de un Formulario</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lección 2: Estructura Básica de un Formulario</h1>
+    </header>
+    <main class="container">
+        <div class="lesson-content">
+            <h2>La etiqueta <code>&lt;form&gt;</code></h2>
+            <p>
+                Todo formulario en HTML comienza y termina con la etiqueta <code>&lt;form&gt;</code>. Esta etiqueta
+                actúa como un contenedor para todos los elementos de entrada (campos de texto, botones, etc.) que
+                componen el formulario.
+            </p>
+            <p>
+                La etiqueta <code>&lt;form&gt;</code> tiene dos atributos principales que son cruciales para su
+                funcionamiento: <code>action</code> y <code>method</code>.
+            </p>
+
+            <h3>Atributo <code>action</code></h3>
+            <p>
+                El atributo <code>action</code> especifica la URL a la que se enviarán los datos del formulario cuando
+                el usuario lo envíe. Esta URL generalmente apunta a un script en el servidor (escrito en lenguajes como
+                PHP, Python, Node.js, etc.) que procesará la información.
+            </p>
+            <p>Si se deja en blanco o se usa "#", los datos se enviarán a la misma página.</p>
+
+            <h3>Atributo <code>method</code></h3>
+            <p>
+                El atributo <code>method</code> define el método HTTP que se usará para enviar los datos. Los dos
+                valores más comunes son:
+            </p>
+            <ul>
+                <li><strong>GET:</strong> Los datos del formulario se añaden a la URL especificada en el atributo
+                    <code>action</code>. Es útil para formularios de búsqueda o cuando se quiere que la URL resultante
+                    se pueda marcar como favorita. Tiene un límite de tamaño y no es seguro para datos sensibles.</li>
+                <li><strong>POST:</strong> Los datos del formulario se envían en el cuerpo de la solicitud HTTP. Es más
+                    seguro para enviar información sensible (como contraseñas) y no tiene límite de tamaño. Es el método
+                    preferido para formularios que modifican datos en el servidor (como registros o publicaciones).</li>
+            </ul>
+
+            <h2>Ejemplo de Código</h2>
+            <p>Aquí tienes la estructura más básica de un formulario:</p>
+            <div class="code-example">
+                <pre><code>
+&lt;form action="/procesar-datos" method="POST"&gt;
+
+  &lt;!-- Aquí dentro irán todos los campos del formulario --&gt;
+  &lt;!-- (Inputs, labels, textareas, botones, etc.) --&gt;
+
+&lt;/form&gt;
+                </code></pre>
+            </div>
+
+            <div class="challenge">
+                <h3>Reto</h3>
+                <p>Crea la estructura de un formulario en el espacio de abajo. Configúralo para que envíe los datos a
+                    una página imaginaria llamada <code>/registro</code> utilizando el método <code>POST</code>.</p>
+                <!-- Espacio para el reto del alumno -->
+
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Volver al Menú Principal</a>
+        </div>
+    </main>
+    <footer>
+        <p>Curso de Desarrollo Web - 2025</p>
+    </footer>
+</body>
+
+</html>

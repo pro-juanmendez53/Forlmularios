@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 7: Botones</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lección 7: Botones</h1>
+    </header>
+    <main class="container">
+        <div class="lesson-content">
+            <h2>Tipos de Botones en Formularios</h2>
+            <p>
+                Los botones son el principal mecanismo de acción en un formulario. Permiten al usuario confirmar,
+                cancelar o realizar otras acciones. Hay dos formas principales de crear botones: con la etiqueta
+                <code>&lt;input&gt;</code> o con la etiqueta <code>&lt;button&gt;</code>.
+            </p>
+
+            <h3>Botones con <code>&lt;input&gt;</code></h3>
+            <p>Ya los hemos visto brevemente. Son simples y directos.</p>
+            <ul>
+                <li><code>&lt;input type="submit"&gt;</code>: Su acción por defecto es enviar el formulario. El texto
+                    del botón se define con el atributo <code>value</code>.</li>
+                <li><code>&lt;input type="reset"&gt;</code>: Su acción por defecto es limpiar todos los campos del
+                    formulario, devolviéndolos a su estado inicial. El texto también se define con <code>value</code>.
+                </li>
+                <li><code>&lt;input type="button"&gt;</code>: Un botón genérico sin acción por defecto. Es una "pizarra
+                    en blanco" que requiere JavaScript para ser útil.</li>
+            </ul>
+
+            <h3>La etiqueta <code>&lt;button&gt;</code></h3>
+            <p>
+                La etiqueta <code>&lt;button&gt;</code> es más moderna y flexible. A diferencia de
+                <code>&lt;input&gt;</code>, es una etiqueta de apertura y cierre. Esto permite incluir contenido más
+                rico dentro del botón, como texto con formato (negritas, cursivas) e incluso imágenes.
+            </p>
+            <p>El comportamiento del <code>&lt;button&gt;</code> se define con su atributo <code>type</code>:</p>
+            <ul>
+                <li><code>&lt;button type="submit"&gt;</code>: (Valor por defecto si se omite) Envía el formulario.</li>
+                <li><code>&lt;button type="reset"&gt;</code>: Limpia el formulario.</li>
+                <li><code>&lt;button type="button"&gt;</code>: No hace nada por defecto, necesita JavaScript.</li>
+            </ul>
+            <p><strong>¡Cuidado!</strong> Si usas <code>&lt;button&gt;</code> dentro de un <code>&lt;form&gt;</code> y
+                omites el <code>type</code>, actuará como un botón de envío (submit), lo que puede causar envíos de
+                formulario no deseados.</p>
+
+            <h2>Ejemplo de Código</h2>
+            <div class="code-example">
+                <pre><code>
+&lt;form action="#"&gt;
+  &lt;!-- Campos del formulario aquí --&gt;
+  &lt;label for="user-text"&gt;Dato:&lt;/label&gt;
+  &lt;input type="text" id="user-text"&gt;
+
+  &lt;h4&gt;Botones con &lt;input&gt;&lt;/h4&gt;
+  &lt;input type="submit" value="Enviar (input)"&gt;
+  &lt;input type="reset" value="Limpiar (input)"&gt;
+
+  &lt;h4&gt;Botones con &lt;button&gt;&lt;/h4&gt;
+  &lt;button type="submit"&gt;
+    &lt;strong&gt;Enviar&lt;/strong&gt; (button)
+  &lt;/button&gt;
+  &lt;button type="reset"&gt;Limpiar (button)&lt;/button&gt;
+  &lt;button type="button" onclick="alert('Hola Mundo!')"&gt;
+    Botón con JavaScript
+  &lt;/button&gt;
+&lt;/form&gt;
+                </code></pre>
+            </div>
+
+            <div class="challenge">
+                <h3>Reto</h3>
+                <p>Crea un formulario con un campo de texto. Añade dos botones creados con la etiqueta
+                    <code>&lt;button&gt;</code>: uno de tipo "submit" que diga "Registrarse" y otro de tipo "reset" que
+                    diga "Empezar de nuevo".</p>
+                <!-- Espacio para el reto del alumno -->
+
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Volver al Menú Principal</a>
+        </div>
+    </main>
+    <footer>
+        <p>Curso de Desarrollo Web - 2025</p>
+    </footer>
+</body>
+
+</html>

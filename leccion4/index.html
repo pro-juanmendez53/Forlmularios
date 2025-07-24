@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 4: Etiqueta &lt;label&gt;</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lección 4: La Etiqueta <code>&lt;label&gt;</code></h1>
+    </header>
+    <main class="container">
+        <div class="lesson-content">
+            <h2>Importancia de las Etiquetas</h2>
+            <p>
+                La etiqueta <code>&lt;label&gt;</code> es fundamental para la <strong>usabilidad y
+                    accesibilidad</strong> de los formularios. Proporciona una descripción textual para un elemento de
+                entrada (un <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, etc.).
+            </p>
+            <p>
+                Aunque podrías simplemente escribir texto al lado de un campo, usar <code>&lt;label&gt;</code> ofrece
+                dos ventajas clave:
+            </p>
+            <ol>
+                <li><strong>Mejora la Usabilidad:</strong> Cuando un usuario hace clic en el texto de una etiqueta, el
+                    foco se mueve automáticamente al campo de entrada asociado. Esto es especialmente útil para
+                    elementos pequeños como checkboxes y radio buttons.</li>
+                <li><strong>Mejora la Accesibilidad:</strong> Los lectores de pantalla (software que usan las personas
+                    con discapacidad visual) utilizan las etiquetas para anunciar qué información se debe introducir en
+                    un campo de formulario. Sin etiquetas, el formulario sería muy difícil de usar para ellos.</li>
+            </ol>
+
+            <h2>Asociar Etiquetas con Entradas</h2>
+            <p>
+                Hay dos maneras de asociar una <code>&lt;label&gt;</code> con un campo de entrada. La más robusta y
+                recomendada es usando los atributos <code>for</code> y <code>id</code>.
+            </p>
+            <ol>
+                <li>El atributo <code>id</code> del campo de entrada (<code>&lt;input&gt;</code>) debe tener un valor
+                    único en la página.</li>
+                <li>El atributo <code>for</code> de la etiqueta (<code>&lt;label&gt;</code>) debe coincidir exactamente
+                    con el valor del <code>id</code> del campo de entrada.</li>
+            </ol>
+
+            <h2>Ejemplo de Código</h2>
+            <p>Observa cómo el atributo <code>for</code> de la etiqueta coincide con el <code>id</code> del input.</p>
+            <div class="code-example">
+                <pre><code>
+&lt;form action="#"&gt;
+  &lt;div&gt;
+    &lt;!-- Asociación explícita con 'for' e 'id' --&gt;
+    &lt;label for="nombre_usuario"&gt;Nombre de usuario:&lt;/label&gt;
+    &lt;input type="text" id="nombre_usuario" name="username"&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;input type="checkbox" id="recordarme" name="remember"&gt;
+    &lt;label for="recordarme"&gt;Recordarme en este equipo&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+                </code></pre>
+            </div>
+            <p>Prueba a hacer clic en el texto "Nombre de usuario:" o "Recordarme en este equipo" en un formulario real.
+                Verás que el cursor se activa en el campo correspondiente.</p>
+
+            <div class="challenge">
+                <h3>Reto</h3>
+                <p>A continuación tienes un campo de texto y un checkbox sin etiquetas adecuadas. Modifica el código
+                    para asociar correctamente una <code>&lt;label&gt;</code> a cada uno de ellos usando el método
+                    <code>for</code>/<code>id</code>.</p>
+
+                <!-- Espacio para el reto del alumno -->
+                <form action="#">
+                    <div>
+                        Correo Electrónico:
+                        <input type="email" name="email">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="subscribe">
+                        Suscribirme al boletín de noticias.
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Volver al Menú Principal</a>
+        </div>
+    </main>
+    <footer>
+        <p>Curso de Desarrollo Web - 2025</p>
+    </footer>
+</body>
+
+</html>

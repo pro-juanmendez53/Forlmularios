@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 9: Agrupación de Elementos</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lección 9: Agrupación de Elementos (<code>&lt;fieldset&gt;</code> y <code>&lt;legend&gt;</code>)</h1>
+    </header>
+    <main class="container">
+        <div class="lesson-content">
+            <h2>Organizar Visualmente Secciones del Formulario</h2>
+            <p>
+                Cuando un formulario es largo y complejo, puede ser útil agrupar campos relacionados en secciones. Para
+                esto, HTML nos proporciona dos etiquetas semánticas: <code>&lt;fieldset&gt;</code> y
+                <code>&lt;legend&gt;</code>.
+            </p>
+            <ul>
+                <li><code>&lt;fieldset&gt;</code>: Se usa para agrupar un conjunto de campos relacionados en un
+                    formulario. El navegador generalmente dibuja un borde alrededor de estos elementos para indicar
+                    visualmente la agrupación.</li>
+                <li><code>&lt;legend&gt;</code>: Se usa para proporcionar un título o una leyenda para el
+                    <code>&lt;fieldset&gt;</code>. Debe ser el primer elemento hijo del <code>&lt;fieldset&gt;</code>.
+                </li>
+            </ul>
+
+            <h2>Mejora de la Accesibilidad y Estructura</h2>
+            <p>
+                Más allá del beneficio visual, usar <code>&lt;fieldset&gt;</code> y <code>&lt;legend&gt;</code> mejora
+                enormemente la accesibilidad. Los lectores de pantalla anuncian la leyenda (<code>&lt;legend&gt;</code>)
+                a medida que el usuario navega por los campos dentro del <code>&lt;fieldset&gt;</code>.
+            </p>
+            <p>
+                Por ejemplo, si tienes un grupo de radio buttons para "Tipo de envío", el lector de pantalla podría
+                anunciar "Tipo de envío: Envío estándar" o "Tipo de envío: Envío exprés", proporcionando un contexto
+                crucial que de otro modo se perdería.
+            </p>
+
+            <h2>Ejemplo de Código</h2>
+            <p>En este ejemplo, agrupamos la información personal y las preferencias de contacto en dos secciones
+                claras.</p>
+            <div class="code-example">
+                <pre><code>
+&lt;form action="#"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Datos Personales&lt;/legend&gt;
+    &lt;div&gt;
+      &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+      &lt;input type="text" id="nombre" name="nombre"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;label for="email"&gt;Email:&lt;/label&gt;
+      &lt;input type="email" id="email" name="email"&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Preferencias de Notificación&lt;/legend&gt;
+    &lt;div&gt;
+      &lt;input type="checkbox" id="notif_email" name="notif_email"&gt;
+      &lt;label for="notif_email"&gt;Recibir notificaciones por email&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;input type="checkbox" id="notif_sms" name="notif_sms"&gt;
+      &lt;label for="notif_sms"&gt;Recibir notificaciones por SMS&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+
+  &lt;button type="submit"&gt;Guardar&lt;/button&gt;
+&lt;/form&gt;
+                </code></pre>
+            </div>
+
+            <div class="challenge">
+                <h3>Reto</h3>
+                <p>Crea un formulario para elegir una pizza. Usa un <code>&lt;fieldset&gt;</code> con la leyenda
+                    "Tamaño" para agrupar tres radio buttons ("Pequeña", "Mediana", "Grande"). Usa otro
+                    <code>&lt;fieldset&gt;</code> con la leyenda "Ingredientes Extra" para agrupar dos checkboxes
+                    ("Queso extra", "Piña").</p>
+                <!-- Espacio para el reto del alumno -->
+
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Volver al Menú Principal</a>
+        </div>
+    </main>
+    <footer>
+        <p>Curso de Desarrollo Web - 2025</p>
+    </footer>
+</body>
+
+</html>

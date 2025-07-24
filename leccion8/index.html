@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 8: Validación Básica de Formularios</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lección 8: Validación Básica de Formularios</h1>
+    </header>
+    <main class="container">
+        <div class="lesson-content">
+            <h2>Validación Automática con HTML5</h2>
+            <p>
+                HTML5 introdujo una serie de atributos que permiten realizar validaciones de datos directamente en el
+                navegador, sin necesidad de JavaScript. Esto mejora la experiencia del usuario al proporcionar feedback
+                inmediato.
+            </p>
+            <p>
+                Cuando un usuario intenta enviar un formulario con campos que no cumplen estas reglas, el navegador
+                detiene el envío y muestra un mensaje de error junto al campo incorrecto.
+            </p>
+
+            <h3>Atributos de Validación Comunes</h3>
+            <ul>
+                <li><code>required</code>: El campo no puede estar vacío.</li>
+                <li><code>minlength</code> y <code>maxlength</code>: Especifican la longitud mínima y máxima de
+                    caracteres para un campo de texto.</li>
+                <li><code>min</code> y <code>max</code>: Definen el valor mínimo y máximo para campos numéricos
+                    (<code>type="number"</code>) o de fecha (<code>type="date"</code>).</li>
+                <li><code>type="email"</code> y <code>type="url"</code>: El navegador comprueba que el valor introducido
+                    tenga el formato de un correo electrónico o una URL, respectivamente.</li>
+                <li><code>pattern</code>: El atributo más potente. Permite definir una <strong>expresión
+                        regular</strong> que el valor del campo debe cumplir. Es útil para formatos específicos, como un
+                    código postal o un número de teléfono.</li>
+            </ul>
+
+            <h3>Mensajes de Error</h3>
+            <p>
+                Los mensajes de error que aparecen son predeterminados y dependen del navegador y su idioma. Por
+                ejemplo, "Por favor, rellena este campo" o "Introduce una dirección de correo electrónico válida".
+                Aunque estos mensajes se pueden personalizar con JavaScript, la validación básica de HTML5 es un
+                excelente punto de partida.
+            </p>
+
+            <h2>Ejemplo de Código</h2>
+            <div class="code-example">
+                <pre><code>
+&lt;form action="#"&gt;
+  &lt;div&gt;
+    &lt;label for="username"&gt;Nombre de usuario (obligatorio, 5-10 caracteres):&lt;/label&gt;
+    &lt;input type="text" id="username" name="username" required minlength="5" maxlength="10"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="email"&gt;Correo electrónico (obligatorio):&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="cp"&gt;Código Postal (5 dígitos):&lt;/label&gt;
+    &lt;input type="text" id="cp" name="postal_code" pattern="[0-9]{5}" title="Debe contener 5 dígitos numéricos"&gt;
+  &lt;/div&gt;
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+                </code></pre>
+            </div>
+            <p>Intenta enviar el formulario de ejemplo sin rellenar los campos o con datos incorrectos para ver la
+                validación en acción.</p>
+
+            <div class="challenge">
+                <h3>Reto</h3>
+                <p>Crea un formulario de registro de contraseña. Debe tener un campo de contraseña que sea obligatorio y
+                    que deba tener una longitud mínima de 8 caracteres. Añade un botón de envío para probar la
+                    validación.</p>
+                <!-- Espacio para el reto del alumno -->
+
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Volver al Menú Principal</a>
+        </div>
+    </main>
+    <footer>
+        <p>Curso de Desarrollo Web - 2025</p>
+    </footer>
+</body>
+
+</html>
